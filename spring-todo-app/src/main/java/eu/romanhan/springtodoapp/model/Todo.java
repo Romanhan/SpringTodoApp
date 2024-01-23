@@ -1,4 +1,4 @@
-package eu.romanhan.springtodoapp.entity;
+package eu.romanhan.springtodoapp.model;
 
 import java.time.LocalDate;
 
