@@ -1,12 +1,11 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-
 <html>
 
 	<head>
 	<title>Todo Management</title>
-	<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="webjars/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" >
 	
 		<style>
 		.footer {
@@ -14,10 +13,13 @@
 		 left: 0;
 		 bottom: 0;
 		 width: 100%;
-		 background-color: black;
-		 color: white;
-		 height: 100px;
-		 text-align: center;
+		 background-color: var(--bs-light);
+		 color: black;
+		 height: 50px;
+		 display: flex;
+         align-items: center; /* Vertical centering */
+         justify-content: flex-start; /* Horizontal centering */
+         padding-left: 10px;
 		}
 		</style>
 	

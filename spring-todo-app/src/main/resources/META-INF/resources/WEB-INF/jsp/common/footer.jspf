@@ -1,11 +1,18 @@
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="webjars/bootstrap-datepicker/1.0.1/js/bootstrap-datepicker.js"></script>
-	<script>
-	    $('#targetDate').datepicker({
-	        format: 'dd/mm/yyyy'
-	    });
-	</script>
+<script src="webjars/jquery/3.7.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="webjars/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+
+
+<!-- 	<script> -->
+<!-- // 		$(document).ready(function () { -->
+<!-- // 	        $('#date').datepicker({ -->
+<!-- // 	            format: 'dd.MM.yyyy' -->
+<!-- // 	        }); -->
+<!-- // 	    }); -->
+<!-- 	</script> -->
+	
+	<div class="footer">
+    Made by Romanhan
 	
 	</body>
 

@@ -3,10 +3,12 @@
 
 <div class="container">
 
- <div class="panel panel-primary">
-     <div class="panel-heading">Home Page</div>
-     <hr>
-        <div class="panel-body">
+ <div class="card my-3">
+    <div class="card-header text-black">
+    <h5 class="card-title">Home Page</h5>
+    </div>
+     
+        <div class="card-body">
            Welcome ${name}! <a href="/list-todos">Click here</a> to manage your todo's.
         </div>
      </div>
