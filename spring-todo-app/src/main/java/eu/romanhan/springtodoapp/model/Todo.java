@@ -15,7 +15,10 @@ public class Todo {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Size(min = 2, message = "Minnimum two letters")
+
+	private String userName;
+
+	@Size(min = 2, message = "Minimum two letters")
 	private String description;
 
 	@DateTimeFormat(pattern = "dd.MM.yyyy")
@@ -26,7 +29,8 @@ public class Todo {
 
 	}
 
-	public Todo(String description, LocalDate targetDate, boolean completed) {
+	public Todo(String userString, String description, LocalDate targetDate, boolean completed) {
+		this.userName = userString;
 		this.description = description;
 		this.targetDate = targetDate;
 		this.completed = completed;
@@ -38,6 +42,14 @@ public class Todo {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getDescription() {

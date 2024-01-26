@@ -11,7 +11,8 @@
                 <thead>
                     <tr>
                         <th width="40%">Description</th>
-                        <th width="40%">Target Date</th>
+                        <th width="20%">Target Date</th>
+                        <th width="20%">Completed</th>
                         <th width="20%"></th>
                     </tr>
                 </thead>
@@ -20,6 +21,7 @@
                         <tr>
                             <td>${todo.description}</td>
                             <td>${todo.targetDate}</td>
+                            <td>${todo.completed}</td>
                             <td>
                                 <a href="/update-todo?id=${todo.id}" class="btn btn-success">Update</a>
                                 <a href="/delete-todo?id=${todo.id}" class="btn btn-warning">Delete</a>

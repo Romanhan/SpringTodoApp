@@ -1,7 +1,14 @@
 <%@ include file="common/header.jspf" %>
 <%@ include file="common/navigation.jspf" %>
 
+<html>
+<head>
+    <link href="webjars/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="webjars/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet" >
+</head>
+<body>
 <div class="container">
+
     <h5>Enter Todo Page</h5>
 
     <form:form method="post" modelAttribute="todo">
@@ -31,5 +38,6 @@
 	});
 </script>
 
-
+</body>
+</html>
 

@@ -17,18 +17,29 @@ public class TodoService {
 		this.todoRepository = todoRepository;
 	}
 
-	public List<Todo> getAllTodos() {
-		List<Todo> todos = todoRepository.findAll();
-		return todos;
+	public List<Todo> getTodosByUser(String name) {
+		return todoRepository.findByUserName(name);
 	}
 
-	public void addTodo(String description, LocalDate targetDate, boolean completed) {
-		Todo todo = new Todo(description, targetDate, completed);
+	public void addTodo(String userName, String description, LocalDate targetDate, boolean completed) {
+		Todo todo = new Todo(userName, description, targetDate, completed);
 		todoRepository.save(todo);
 	}
 
 	public void saveTodo(Todo todo) {
 		todoRepository.save(todo);
+	}
+
+	public Todo getTodoById(Long id) {
+		return todoRepository.findById(id).get();
+	}
+
+	public void updateTodo(Todo todo) {
+		todoRepository.save(todo);
+	}
+
+	public void deleteTodoById(Long id) {
+		todoRepository.deleteById(id);
 	}
 
 }
