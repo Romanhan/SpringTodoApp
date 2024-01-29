@@ -12,22 +12,29 @@
                     <tr>
                         <th width="40%">Description</th>
                         <th width="20%">Target Date</th>
-                        <th width="20%">Completed</th>
+                        <th width="10%">Completed</th>
                         <th width="20%"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <c:forEach items="${todos}" var="todo">
-                        <tr>
-                            <td>${todo.description}</td>
-                            <td>${todo.targetDate}</td>
-                            <td>${todo.completed}</td>
-                            <td>
-                                <a href="/update-todo?id=${todo.id}" class="btn btn-success">Update</a>
-                                <a href="/delete-todo?id=${todo.id}" class="btn btn-warning">Delete</a>
-                            </td>
-                        </tr>
-                    </c:forEach>
+					    <tr>
+					        <form action="/update-todo" method="post">
+					            <input type="hidden" name="id" value="${todo.id}">
+					            <td>${todo.description}</td>
+					            <input type="hidden" name="description" value="${todo.description}">
+					            <td>${todo.targetDate}</td>
+					            <input type="hidden" name="targetDate" value="${todo.targetDate}">
+					            <td>
+					                <input type="checkbox" name="completed" ${todo.completed ? 'checked' : ''} onchange="this.form.submit()">
+					            </td>
+					        </form>
+					        <td>
+					            <a href="/update-todo?id=${todo.id}" class="btn btn-success">Update</a>
+					            <a href="/delete-todo?id=${todo.id}" class="btn btn-warning">Delete</a>
+					        </td>
+					    </tr>
+					</c:forEach>
                 </tbody>
             </table>         
         </div> 
@@ -38,6 +45,11 @@
     </div>
 </div>
 
+<script>
+    $('#targetDate').datepicker({
+        format: 'dd.mm.yyyy'
+    });
+</script>
            
 
 <%@ include file="common/footer.jspf"%>

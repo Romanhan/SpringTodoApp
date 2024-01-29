@@ -2,8 +2,6 @@ package eu.romanhan.springtodoapp.model;
 
 import java.time.LocalDate;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -20,8 +18,6 @@ public class Todo {
 
 	@Size(min = 2, message = "Minimum two letters")
 	private String description;
-
-	@DateTimeFormat(pattern = "dd.MM.yyyy")
 	private LocalDate targetDate;
 	private boolean completed;
 
