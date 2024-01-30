@@ -2,4 +2,4 @@
 #### Small app with web interface
 
 My first application on Spring. 
-Todo app save data in H2.
+The Todo app saves data in H2.
